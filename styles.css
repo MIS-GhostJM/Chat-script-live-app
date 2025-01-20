@@ -288,19 +288,27 @@ body {
     color: var(--text-light);
 }
 
-.main-nav :nth-child(16){
+.main-nav :nth-child(20){
     background: #918409;
 }
 
-.main-nav :nth-child(16):hover{
+.main-nav :nth-child(20):hover{
     background: #c3b21c;
 }
-.main-nav :nth-child(17){
+.main-nav :nth-child(16){
     background: #277a20;
 }
 
+.main-nav :nth-child(16):hover{
+    background: #31c224;
+}
+
+.main-nav :nth-child(17){
+    background: #c48f2c;
+}
+
 .main-nav :nth-child(17):hover{
-    background: #0ba874;
+    background: #b3d615;
 }
 .main-nav :nth-child(18){
     background: #08664a;
