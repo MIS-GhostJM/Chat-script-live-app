@@ -181,14 +181,26 @@ body {
     padding-right: 50px;
 }
 
+.logo{
+    display: block;
+}
+
 .logo h1 {
+    padding-left: 50px;
+    font-weight: 1500;
+    font-size: larger;
+    color: #7bf1a8;
+    margin-bottom: 0px;
+}
+.logo h4 {
+    margin-top: 0px;
     padding-left: 50px;
     font-weight: 700;
     color: #7bf1a8;
 }
 
 .header-actions {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 30px;
     padding-right: 100px;
@@ -249,7 +261,7 @@ body {
 /* Navigation Styles */
 .main-nav {
     position: sticky;
-    top: 74.8px;
+    top: 97.19px;
     display: flex;
     flex-wrap: wrap;
     background: var(--background-color);
@@ -340,6 +352,10 @@ body {
 .main-nav :last-child:hover{
     background: #38dacc;
     border: 2px solid #1ebed6;
+}
+
+.main-nav :nth-child(15){
+    display: none;
 }
 
 /* Sections Container */
