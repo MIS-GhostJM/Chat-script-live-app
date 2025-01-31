@@ -261,7 +261,7 @@ body {
 /* Navigation Styles */
 .main-nav {
     position: sticky;
-    top: 97.19px;
+    top: 79.27px;
     display: flex;
     flex-wrap: wrap;
     background: var(--background-color);
