@@ -77,16 +77,70 @@
                 <section id="opening-section" class="interaction-section active">
                     <div class="section-grid">
                         <div class="section-headers">
-                            <h3>Booking.com Opening</h3>
+                            <h3>Chat Opening (asking to wait) ETG/B.com UK</h3>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                Hello this is Gotogate in partnership with Booking.com, thank you for confirming your booking. 
-                                I'm <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>, May I have your name, please?
+                                Hello,  <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is  <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. Please give me a moment to review your request.
                             </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Chat Opening (asking to state the request) ETG/B.com UK</h3>
+                        </div>
+                        <div class="section-scripts">
                             <div class="script-card">
-                                Thank you <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>!, 
-                                How can I assist you today?
+                                Hello,  <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is  <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. How may I help you with your booking?.
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Chat Opening due to long wait time (more than 5 minutes) Request stated ETG/B.com UK</h3>
+                            <p>The customer has gone through the workflow and is waiting to be connected to the agent</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Hi <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, 
+                                this is <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. 
+                                Thank you for your patience as we handle a high volume of requests. I'll review your case details and be with you shortly!
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Chat Opening after connecting with the chat BOT (but no resolution) ETG UK</h3>
+                            <p>The customer has gone through our chatbot however his query was not resolved and is now connected to the agent</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Hi <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, 
+                                this is <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span> from 
+                                <span class="manual-edit" data-default-text="[Brand]" onclick="enableTextEdit(this)">[Brand]</span> Support. 
+                                I noticed our chatbot couldn't fully assist you—my apologies for the inconvenience, 
+                                and thank you for your patience! 
+                                I'll review your case details and be with you shortly!
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Order not found (request to spell provider's URL) ETG UK</h3>
+                            <p>When the customer provides an order number which is related to other OTAs/provider's booking</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Thanks for providing the order number! It looks like this one isn't from our site. 
+                                Kindly provide the correct spelling of the email address linked to your confirmation email. 
+                                If that is unavailable, 
+                                please spell out the URL <span class="manual-edit" data-default-text="[website address]" onclick="enableTextEdit(this)">[website address]</span> where you purchased your ticket. 
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Order not found (potentially booked with another provider) ETG UK</h3>
+                            <p>When the customer provides a name/site's URL which is related to other OTAs/provider's booking</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Thanks for sharing your booking reference! 
+                                It seems the number provided doesn’t match a ticket purchased through our website and may have been purchased elsewhere. 
+                                If you have another reference number, 
+                                please provide it now. Otherwise, 
+                                it's best to reach out directly to the provider. 
+                                Let me know if there's anything else I can assist you with!
                             </div>
                         </div>
                         <div class="section-headers">
@@ -314,6 +368,45 @@
                 <!--Closing-->
                 <section id="closing-section" class="interaction-section">
                     <div class="section-grid">
+                        <div class="section-headers">
+                            <h3>Question before closing ETG/B.com UK</h3>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Is there anything else I can assist you with today?
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Close chat ETG/B.com UK</h3>
+                            <p>When the customer responds "no" to a question "Is there anything else I can help you with?</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Thank you for reaching out. Have a wonderful day!
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Customer doesn't respond 1st Warning ETG/B.com UK</h3>
+                            <p>To use when the customer doesn't respond for 2 minutes. Send it and wait for another 3 min.</p>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                Hi, I wanted to check in to see if you're still with us. 
+                                Please reply so I can continue assisting you. If I don't hear from you in the next 3 minutes, 
+                                the chat will close due to inactivity.<br><br>
+                                Don't worry - you can always reach out again whenever you’re ready. We’re here to help!
+                            </div>
+                        </div>
+                        <div class="section-headers">
+                            <h3>Close chat after no response for 5 min ETG/B.com UK</h3>
+                        </div>
+                        <div class="section-scripts">
+                            <div class="script-card">
+                                I still haven't received a response, and it seems that you are no longer connected. This chat will now be closed. 
+                                If you need further assistance, please start a new chat. 
+                                Thank you!.
+                            </div>
+                        </div>
                         <div class="section-headers">
                             <h3>Thanking and checking if customer needs any further help</h3>
                         </div>
@@ -1217,109 +1310,109 @@
                 <section id="new_update-section" class="interaction-section">
                     <div class="section-grid">
                         <div class="section-headers">
-                            <h3>Booking.com Opening</h3>
+                            <h3>Chat Opening (asking to wait) ETG/B.com UK</h3>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                Hello this is Gotogate in partnership with Booking.com, thank you for confirming your booking. 
-                                I'm <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>, May I have your name, please?
-                            </div>
-                            <div class="script-card">
-                                Thank you <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>!, 
-                                How can I assist you today?
+                                Hello,  <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is  <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. Please give me a moment to review your request.
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Fare difference is high<h3>
+                            <h3>Chat Opening (asking to state the request) ETG/B.com UK</h3>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                The prices are dynamic in nature and depend on the seat and fare availability – as of now, 
-                                the fare is higher for the date and time you are choosing, 
-                                than the ticket you originally paid for
-                            </div>
-                            <div class="script-card">
-                                I have checked the availability for multiple dates and this is the cheapest date and fare in this specific date range that I can find for you
+                                Hello,  <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is  <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. How may I help you with your booking?.
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Fare cheaper on other sites</h3>
+                            <h3>Chat Opening due to long wait time (more than 5 minutes) Request stated ETG/B.com UK</h3>
+                            <p>The customer has gone through the workflow and is waiting to be connected to the agent</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                I understand your concern, but the fares may differ on airlines website or other booking sites, 
-                                but we are following the changes based on the restrictions and terms and conditions of the fare class that you have booked
+                                Hi <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, 
+                                this is <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span>. 
+                                Thank you for your patience as we handle a high volume of requests. I'll review your case details and be with you shortly!
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Fare cheaper on our site</h3>
+                            <h3>Chat Opening after connecting with the chat BOT (but no resolution) ETG UK</h3>
+                            <p>The customer has gone through our chatbot however his query was not resolved and is now connected to the agent</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                I understand your concern, but the prices and availability that you are seeing currently on our website is applicable for new bookings since they may be basic or most restricted fares, 
-                                but we have to follow the restrictions of original ticket that you have booked and the inventory is different for rebooking
+                                Hi <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, 
+                                this is <span class="agent_name" data-default-text="[Agent name]">[Agent name]</span> from 
+                                <span class="manual-edit" data-default-text="[Brand]" onclick="enableTextEdit(this)">[Brand]</span> Support. 
+                                I noticed our chatbot couldn't fully assist you—my apologies for the inconvenience, 
+                                and thank you for your patience! 
+                                I'll review your case details and be with you shortly!
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Downgrade not permitted</h3>
+                            <h3>Order not found (request to spell provider's URL) ETG UK</h3>
+                            <p>When the customer provides an order number which is related to other OTAs/provider's booking</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                We are required to follow the same class of service for rebooking, based on airlines ticket rules, and we are not allowed to downgrade your ticket
+                                Thanks for providing the order number! It looks like this one isn't from our site. 
+                                Kindly provide the correct spelling of the email address linked to your confirmation email. 
+                                If that is unavailable, 
+                                please spell out the URL <span class="manual-edit" data-default-text="[website address]" onclick="enableTextEdit(this)">[website address]</span> where you purchased your ticket. 
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Flexible ticket policy</h3>
+                            <h3>Order not found (potentially booked with another provider) ETG UK</h3>
+                            <p>When the customer provides a name/site's URL which is related to other OTAs/provider's booking</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                As per Flexible ticket policy, only airlines change fee and handling fee are waived, but you still have to pay the difference in fare
+                                Thanks for sharing your booking reference! 
+                                It seems the number provided doesn’t match a ticket purchased through our website and may have been purchased elsewhere. 
+                                If you have another reference number, 
+                                please provide it now. Otherwise, 
+                                it's best to reach out directly to the provider. 
+                                Let me know if there's anything else I can assist you with!
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Step Guide for Customer to check the Fare rules / Terms and Condition</h3>
+                            <h3>Question before closing ETG/B.com UK</h3>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                Step 1 - Kindly check the confirmation email that was sent to you after booking<br>
-                                Step 2 - Please scroll to the bottom portion of the confirmation email where you can find the "Travel Conditions/Fare Rules" link<br>
-                                Step 3 - If you click on the Ticket Rules link, a new window will open<br>
-                                Step 4 - Then, you have to sign in your Email Address and Order Number <span class="manual-edit" data-default-text="Insert Order#" onclick="enableTextEdit(this)">Insert Order#</span><br>
-                                Step 5 - Once done, a verification email will be sent to your email which you need to confirm<br>
-                                Step 6 - Then, you can review the Ticket Rules associated to your booking
+                                Is there anything else I can assist you with today?
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Step Guide for Customer how to check in on airlines website</h3>
+                            <h3>Close chat ETG/B.com UK</h3>
+                            <p>When the customer responds "no" to a question "Is there anything else I can help you with?</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                Step 1 - Kindly go to the airlines website <span class="manual-edit" data-default-text="Insert link" onclick="enableTextEdit(this)">Insert link</span> and click on the Manage my booking / Check-In tab<br>
-                                Step 2 - Enter your Booking reference PNR: <span class="manual-edit" data-default-text="(Insert PNR)" onclick="enableTextEdit(this)">(Insert PNR)</span>/Ticket number: <span class="manual-edit" data-default-text="(Insert Ticket#)" onclick="enableTextEdit(this)">(Insert Ticket#)</span>, 
-                                First Name and Last Name exactly as in your ticket<br>
-                                Step 3 - Then you have to click on the Confirm or Submit button<br>
-                                Step 4 - A new page will generate where you need to complete all the required information and your boarding pass will be generated<br><br>
-                                Note - Please review and ensure that you have entered the correct information before you click on Submit or Check-in<br>
-                                Note - Please note that each airline has its own designated window time for online check in
+                                Thank you for reaching out. Have a wonderful day!
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Language translator chat / Start of conversation</h3>
+                            <h3>Customer doesn't respond 1st Warning ETG/B.com UK</h3>
+                            <p>To use when the customer doesn't respond for 2 minutes. Send it and wait for another 3 min.</p>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                Please be advised that we may use a translation tool to provide support in your local language, 
-                                and you may see grammatical errors in our replies. 
-                                I apologize for any confusion and thank you for understanding.
+                                Hi, I wanted to check in to see if you're still with us. 
+                                Please reply so I can continue assisting you. If I don't hear from you in the next 3 minutes, 
+                                the chat will close due to inactivity.<br><br>
+                                Don't worry - you can always reach out again whenever you’re ready. We’re here to help!
                             </div>
                         </div>
                         <div class="section-headers">
-                            <h3>Language translator chat / Middle of the conversation</h3>
+                            <h3>Close chat after no response for 5 min ETG/B.com UK</h3>
                         </div>
                         <div class="section-scripts">
                             <div class="script-card">
-                                I apologize for any grammatical errors during this chat that may have happened due to language translation tool. 
-                                Thank you for your patience and understanding.
+                                I still haven't received a response, and it seems that you are no longer connected. This chat will now be closed. 
+                                If you need further assistance, please start a new chat. 
+                                Thank you!.
                             </div>
                         </div>
                     </div>
