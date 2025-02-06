@@ -358,7 +358,9 @@ body {
 .sections-container {
     padding: 20px;
 }
-
+.interaction-section {
+    display: none;
+}
 .interaction-section.active {
     display: block;
     margin-bottom: 10px;
