@@ -200,7 +200,6 @@ body {
 }
 
 .header-actions {
-    display: none;
     align-items: center;
     gap: 30px;
     padding-right: 100px;
