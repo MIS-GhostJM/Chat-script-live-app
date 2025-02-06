@@ -354,17 +354,9 @@ body {
     border: 2px solid #1ebed6;
 }
 
-.main-nav :nth-child(15){
-    display: none;
-}
-
 /* Sections Container */
 .sections-container {
     padding: 20px;
-}
-
-.interaction-section {
-    display: none;
 }
 
 .interaction-section.active {
