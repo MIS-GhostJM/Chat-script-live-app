@@ -220,50 +220,50 @@ document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.interaction-section');
             const activeSectionId = document.querySelector('.nav-btn.active').id.replace('-nav', '-section');
         
-            // Reset to show only the active section if the search bar is empty
-            if (searchTerm === '') {
+            // Split search term into individual words and convert to lowercase
+            const searchWords = searchTerm.toLowerCase().split(/\s+/).filter(Boolean);
+        
+            if (searchWords.length === 0) {
+                // If search is empty, reset visibility
                 sections.forEach(section => {
                     const sectionId = section.id;
-        
                     if (sectionId === activeSectionId) {
-                        section.classList.add('active'); // Set the section as active
-                        section.style.display = ''; // Show the active section
-                        section.querySelectorAll('.section-headers').forEach(header => {
-                            header.style.display = ''; // Show all headers
-                            header.nextElementSibling.style.display = ''; // Show their content
+                        section.classList.add('active');
+                        section.style.display = '';
+                        section.querySelectorAll('.section-headers, .section-scripts, .script-card').forEach(el => {
+                            el.style.display = '';
                         });
                     } else {
-                        section.classList.remove('active'); // Remove active state
-                        section.style.display = 'none'; // Hide other sections
+                        section.classList.remove('active');
+                        section.style.display = 'none';
                     }
                 });
                 return;
             }
         
-            // Hide all headers and contents initially
             sections.forEach(section => {
-                let hasMatch = false; // Track if the section has at least one matching header
+                let hasMatch = false;
         
                 section.querySelectorAll('.section-headers').forEach(header => {
                     const headerText = header.textContent.toLowerCase();
+                    const matches = searchWords.every(word => headerText.includes(word));
         
-                    if (headerText.includes(searchTerm)) {
-                        header.style.display = ''; // Show the matching header
-                        header.nextElementSibling.style.display = ''; // Show its content
+                    if (matches) {
+                        header.style.display = '';
+                        header.nextElementSibling.style.display = '';
                         hasMatch = true;
                     } else {
-                        header.style.display = 'none'; // Hide non-matching headers
-                        header.nextElementSibling.style.display = 'none'; // Hide their content
+                        header.style.display = 'none';
+                        header.nextElementSibling.style.display = 'none';
                     }
                 });
         
-                // Change section state based on matches
                 if (hasMatch) {
-                    section.classList.add('active'); // Set section as active
-                    section.style.display = ''; // Show the section
+                    section.classList.add('active');
+                    section.style.display = '';
                 } else {
-                    section.classList.remove('active'); // Remove active state
-                    section.style.display = 'none'; // Hide the section
+                    section.classList.remove('active');
+                    section.style.display = 'none';
                 }
             });
         }
